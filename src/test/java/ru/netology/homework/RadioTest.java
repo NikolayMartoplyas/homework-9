@@ -16,6 +16,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void negativeStationNumber() {
         Radio station = new Radio();
@@ -90,7 +91,7 @@ public class RadioTest {
     }
 
     @Test
-    public void permissibleVolumeValue(){
+    public void permissibleVolumeValue() {
         Radio volume = new Radio();
 
         volume.setVolume(5);
@@ -101,7 +102,7 @@ public class RadioTest {
     }
 
     @Test
-    public void InvalidVolumeValue(){
+    public void InvalidVolumeValue() {
         Radio volume = new Radio();
 
         volume.setVolume(101);
@@ -112,7 +113,7 @@ public class RadioTest {
     }
 
     @Test
-    public void increaseVolume(){
+    public void increaseVolume() {
         Radio volume = new Radio();
 
         volume.setVolume(50);
@@ -124,7 +125,7 @@ public class RadioTest {
     }
 
     @Test
-    public void maxVolume(){
+    public void maxVolume() {
         Radio volume = new Radio();
 
         volume.setVolume(100);
@@ -134,8 +135,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void minVolume(){
+    public void minVolume() {
         Radio volume = new Radio();
 
         volume.setVolume(0);
@@ -147,7 +149,7 @@ public class RadioTest {
     }
 
     @Test
-    public void negativeVolume(){
+    public void negativeVolume() {
         Radio volume = new Radio();
 
         volume.setVolume(-1);
@@ -157,8 +159,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void decreaseVolume(){
+    public void decreaseVolume() {
         Radio volume = new Radio();
 
         volume.setVolume(10);
