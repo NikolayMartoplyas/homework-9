@@ -28,8 +28,6 @@ public class Radio {
     public void setStationNumber(int newStationNumber) {
         if (newStationNumber >= 0 && newStationNumber < numberOfHundredRadioStations) {
             this.stationNumber = newStationNumber;
-        } else {
-            return;
         }
     }
 
