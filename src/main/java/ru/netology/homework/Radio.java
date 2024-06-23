@@ -1,33 +1,50 @@
 package ru.netology.homework;
 
 public class Radio {
+    private int numberOfHundredRadioStations = 10;
     private int stationNumber;
     private int volume;
 
-    public void setStationNumber(int newStationNumber) {
-        if (newStationNumber >= 0 && newStationNumber <= 9) {
-            this.stationNumber = newStationNumber;
-        } else {
-            return;
-        }
+    public Radio(int numberOfHundredRadioStations) {
+        this.numberOfHundredRadioStations = numberOfHundredRadioStations;
+    }
 
+    public Radio() {
+    }
+
+
+    public int getNumberOfHundredRadioStations() {
+        return numberOfHundredRadioStations;
     }
 
     public int getStationNumber() {
         return stationNumber;
     }
 
-    public void next() {
-        if (getStationNumber() == 9) {
-            setStationNumber(0);
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setStationNumber(int newStationNumber) {
+        if (newStationNumber >= 0 && newStationNumber < numberOfHundredRadioStations) {
+            this.stationNumber = newStationNumber;
         } else {
-            this.stationNumber++;
+            return;
         }
     }
 
-    public void prev() {
+    public void nextStation() {
+        if (getStationNumber() < numberOfHundredRadioStations - 1) {
+            this.stationNumber++;
+        } else {
+            this.stationNumber = 0;
+        }
+
+    }
+
+    public void prevStation() {
         if (getStationNumber() == 0) {
-            setStationNumber(9);
+            this.stationNumber = numberOfHundredRadioStations - 1;
         } else {
             this.stationNumber--;
         }
@@ -39,10 +56,6 @@ public class Radio {
         } else {
             return;
         }
-    }
-
-    public int getVolume() {
-        return volume;
     }
 
     public void increaseVolume() {
